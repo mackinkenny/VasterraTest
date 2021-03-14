@@ -13,35 +13,14 @@ Vue.use(Vuex);
 const store = new Vuex.Store({
     state: {
         jars: [{
-            name: 'tr',
-            size: 5000
-        },{
-            name: 'rr',
-            size: 1000
-        },{
-            name: 'er',
-            size: 200
-        },{
-            name: 'yt',
-            size: 400
+            name: null,
+            size: null
         }],
         jams: [{
-            name: 'Клубничное',
-            size: 4800
-        },
-            {
-                name: 'Банановое',
-                size: 900
-            },
-            {
-                name: 'Киви',
-                size: 300
-            },
-            {
-                name: 'Маракуя',
-                size: 100
-            }],
-        stage: 3,
+            name: null,
+            size: null
+        }],
+        stage: 1,
     },
 });
 /**
