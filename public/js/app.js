@@ -2255,7 +2255,7 @@ __webpack_require__.r(__webpack_exports__);
         do {
           check = 0;
           var closest = this.jars.reduce(function (prev, curr) {
-            return Math.abs(curr.size - jams[i].size) < Math.abs(prev.size - jams[i].size) && Math.abs(curr.size - jams[i].size) >= 0 ? curr : prev;
+            return Math.abs(curr.size - jams[i].size) <= Math.abs(prev.size - jams[i].size) && Math.abs(curr.size - jams[i].size) >= 0 ? curr.size >= prev.size ? curr : prev : prev;
           });
           this.total.push({
             jar: closest,
@@ -52001,14 +52001,32 @@ Vue.use(vuex__WEBPACK_IMPORTED_MODULE_0__["default"]);
 var store = new vuex__WEBPACK_IMPORTED_MODULE_0__["default"].Store({
   state: {
     jars: [{
-      name: null,
-      size: null
+      name: 'tr',
+      size: 5000
+    }, {
+      name: 'rr',
+      size: 1000
+    }, {
+      name: 'er',
+      size: 200
+    }, {
+      name: 'yt',
+      size: 400
     }],
     jams: [{
-      name: null,
-      size: null
+      name: 'Клубничное',
+      size: 4800
+    }, {
+      name: 'Банановое',
+      size: 900
+    }, {
+      name: 'Киви',
+      size: 300
+    }, {
+      name: 'Маракуя',
+      size: 100
     }],
-    stage: 1
+    stage: 3
   }
 });
 /**

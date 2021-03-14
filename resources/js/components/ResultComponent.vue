@@ -101,7 +101,7 @@
                     do {
                         check = 0;
                         var closest = this.jars.reduce(function (prev, curr) {
-                            return (Math.abs(curr.size - jams[i].size) < Math.abs(prev.size - jams[i].size) && Math.abs(curr.size - jams[i].size) >= 0 ? curr : prev);
+                            return (Math.abs(curr.size - jams[i].size) <= Math.abs(prev.size - jams[i].size) && Math.abs(curr.size - jams[i].size) >= 0 ? (curr.size >= prev.size ? curr : prev): prev);
                         });
                         this.total.push({
                             jar: closest,
