@@ -19,4 +19,8 @@ class TestController extends Controller
         }
         return response()->json($posts);
     }
+
+    public function testApiMain () {
+        return response()->json(['url' => 'https://moskvichmag.ru/']);
+    }
 }
