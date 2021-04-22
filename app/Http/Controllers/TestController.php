@@ -17,6 +17,6 @@ class TestController extends Controller
             $post->content->rendered = str_replace('</strong>','</Text>', $post->content->rendered);
             $post->content->rendered = strip_tags($post->content->rendered, '<Text><img>');
         }
-        dd($posts);
+        return response()->json($posts);
     }
 }
